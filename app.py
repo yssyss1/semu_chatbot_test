@@ -1,3 +1,7 @@
+__import__('pysqlite3')
+import sys
+sys.modules['sqlite3'] = sys.modules.pop('pysqlite3')
+
 import os
 import time
 import streamlit as st
@@ -41,7 +45,15 @@ with st.spinner("챗봇 데이터베이스를 로드 중입니다. 잠시만 기
     )
 
     if os.path.exists(vectorstore_dir):
-        vectorstore = Chroma(persist_directory=vectorstore_dir, embedding_function=embedding_model)
+
+        from chromadb.config import Settings
+        from chromadb import Client
+
+        # DuckDB로 설정
+        settings = Settings(persist_directory="chroma_vectorstore", chroma_db_impl="duckdb")
+        client = Client(settings)
+
+        vectorstore = Chroma(client=client, persist_directory=vectorstore_dir, embedding_function=embedding_model)
     else:
         raise NotImplementedError()
 
