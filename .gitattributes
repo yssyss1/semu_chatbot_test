@@ -1,0 +1,7 @@
+chroma_vectorstore/4082d07a-4ed2-4d66-b3a5-04653c340feb filter=lfs diff=lfs merge=lfs -text
+chroma_vectorstore/chroma.sqlite3 filter=lfs diff=lfs merge=lfs -text
+chroma_vectorstore/4082d07a-4ed2-4d66-b3a5-04653c340feb/link_lists.bin filter=lfs diff=lfs merge=lfs -text
+chroma_vectorstore/4082d07a-4ed2-4d66-b3a5-04653c340feb/data_level0.bin filter=lfs diff=lfs merge=lfs -text
+chroma_vectorstore/4082d07a-4ed2-4d66-b3a5-04653c340feb/header.bin filter=lfs diff=lfs merge=lfs -text
+chroma_vectorstore/4082d07a-4ed2-4d66-b3a5-04653c340feb/index_metadata.pickle filter=lfs diff=lfs merge=lfs -text
+chroma_vectorstore/4082d07a-4ed2-4d66-b3a5-04653c340feb/length.bin filter=lfs diff=lfs merge=lfs -text
